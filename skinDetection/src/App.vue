@@ -1,19 +1,26 @@
-
-
 <template>
+  <div>
+    <MenuBar />
+
+  </div>
+
   <div class="container">
     <Header/>
+    <p>Image must be as close as possible. Blurry images can cause incorrect results.</p>
   </div>
 </template>
 
 
 <script>
 import Header from './components/Header.vue'
+import MenuBar from './components/MenuBar.vue'
+
 
 export default {
   name: 'App',
   components: {
-    Header
+    Header,
+    MenuBar
   },
 }
 
@@ -33,20 +40,19 @@ header {
     padding-right: calc(var(--section-gap) / 2);
   }
 
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
 
 body {
   font-family: 'Poppins', sans-serif;
 }
 .container {
-  max-width: 700px;
-  margin: auto;
+  position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   overflow: auto;
-  min-height: 300px;
+  min-height: 750px;
+  min-width: 750px;
+
   border: 2px solid steelblue;
   padding: 30px;
   border-radius: 5px;

@@ -1,6 +1,6 @@
 <template>
     <header>
-        <h1>Skin Cancer Detection App</h1>
+        <h1>Upload an image to analyse</h1>
         <Button />
     </header>
 
