@@ -7,6 +7,7 @@
   <div class="container">
     <Header/>
     <p>Image must be as close as possible. Blurry images can cause incorrect results.</p>
+    <p>{{ message }}</p>
   </div>
 </template>
 
@@ -15,6 +16,7 @@
 import Header from './components/Header.vue'
 import MenuBar from './components/MenuBar.vue'
 
+import axios from 'axios';
 
 export default {
   name: 'App',
@@ -22,6 +24,22 @@ export default {
     Header,
     MenuBar
   },
+  data () {
+    return {
+      message: '',
+
+    }
+  },
+  created() {
+    axios.get('http://localhost:5000/api/endpoint')
+      .then(response => {
+        this.message = response.data.message;
+      })
+      .catch(error => {
+        console.error(error);
+      });
+  },
+
 }
 
 
