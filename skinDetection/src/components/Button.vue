@@ -13,6 +13,10 @@
       <input type="file" ref="fileInput" @change="upload"/>
     </form>
   </div>
+
+  <div>
+    <p>{{ message }}</p>
+  </div>
    
 
 </template>
@@ -25,22 +29,10 @@ export default {
     data () {
     return {
       // image: null
+      message: ''
     }
   },
   methods: {
-//     onPickFile () {
-//   this.$refs.fileInput.click()
-// },
-// onFilePicked (event) {
-//   const files = event.target.files
-//   let filename = files[0].name
-//   const fileReader = new FileReader()
-//   fileReader.addEventListener('load', () => {
-//     this.imageUrl = fileReader.result
-//   })
-//   fileReader.readAsDataURL(files[0])
-//   this.image = files[0]
-// }, 
 upload() {
       const input = this.$refs.fileInput
       const file = input.files[0]
@@ -50,6 +42,7 @@ upload() {
 
       axios.post('http://localhost:5000/api/photo/upload', formData).then(response => {
         console.log(response.data)
+        this.message = response.data.message
       })
     }
 
