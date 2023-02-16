@@ -1,6 +1,6 @@
 from flask import Flask
 from flask import request
-
+import tensorflow as tf
 from flask_cors import CORS
 from flask_restful import Resource, Api, reqparse
 import os
