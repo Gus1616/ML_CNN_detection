@@ -12,7 +12,9 @@
 
 
 <h4>Tech stack:</h3>
+  
 - Front-end: Vue Js
+  
 - Backend: Flask Resful
 
  
