@@ -6,7 +6,7 @@
     <form class="upload-form">
   <label class="upload-label">
     <span class="upload-icon"><i class="fa fa-cloud-upload"></i></span>
-    <span class="upload-text">Choose a file</span>
+    <span class="upload-text">Choose a file to analyse</span>
     <input class="upload-input" type="file" ref="fileInput" @change="upload"/>
   </label>
 </form>
@@ -106,6 +106,7 @@ strong {
   width: 100%;
   height: 100%;
 }
+
 
 
 

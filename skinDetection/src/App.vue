@@ -3,10 +3,10 @@
     <MenuBar />
 
   </div>
-
-  <div class="container">
+<div>
+  <div class="container" style="background-color: #f0f0f0 ;">
     <Header/>
-    <p>Image must be as close as possible. Blurry images can cause incorrect results.</p>
+    <p>Image must be as close and as clear as possible. Blurry images can cause incorrect results.</p>
     <div class="buttonStyle">
       <Button />
 
@@ -15,6 +15,7 @@
 
     <!-- <p>{{ message }}</p> -->
   </div>
+</div>
 </template>
 
 
@@ -70,6 +71,7 @@ header {
 
 body {
   font-family: 'Poppins', sans-serif;
+
 }
 .buttonStyle {
   padding: 15px;
