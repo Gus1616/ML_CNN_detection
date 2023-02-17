@@ -1,6 +1,8 @@
 from flask import Flask
 from flask import request
 import tensorflow as tf
+tf.config.run_functions_eagerly(True)
+
 from tensorflow import keras
 
 from flask_cors import CORS
@@ -17,9 +19,10 @@ CORS(app)
 api = Api(app)
 
 
-filepath = './saved_model'
+# filepath_model = './saved_model'
 
-model = load_model(filepath, compile = True)
+# model = load_model(filepath_model, compile = True)
+# model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['accuracy'], run_eagerly=True)
 
 
 class Detection(Resource):
@@ -43,12 +46,14 @@ class PhotoUpload(Resource):
             numpy_image = cv2.cvtColor(r_image, cv2.COLOR_BGR2GRAY)
             image = cv2.resize(numpy_image, (28, 28)).astype(np.float32)
             image = image.reshape(-1)
-            image_files.loc[photo, 'pixels_0':] = image
+            image_files.loc[file_path, 'pixels_0':] = image
             image_files = image_files / 255
             test1 = image_files.to_numpy()
             test1 = test1.reshape(-1, 28, 28, 1)
             test1 = np.asarray(test1).astype('float32')
-            predictions = model.predict(test1)
+            loaded_model = load_model('my_model.h5')
+            loaded_model.compile(run_eagerly=True)
+            predictions = loaded_model.predict(test1)
             classes = np.argmax(predictions, axis = 1)
             label_mapping = {
                                 0: 'akiec',
