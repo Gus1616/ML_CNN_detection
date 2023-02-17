@@ -1,20 +1,20 @@
 <template>
     <header>
         <h1>Upload an image to analyse</h1>
-        <Button />
+        <!-- <Button /> -->
     </header>
 
 </template>
 
 <script>
-import Button from './Button.vue'
+// import Button from './Button.vue'
 export default {
     name: 'Header',
     props: {
         title: String,
     },
     components: {
-        Button
+        // Button
     }
 }
 </script>

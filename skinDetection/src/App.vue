@@ -7,7 +7,13 @@
   <div class="container">
     <Header/>
     <p>Image must be as close as possible. Blurry images can cause incorrect results.</p>
-    <p>{{ message }}</p>
+    <div class="buttonStyle">
+      <Button />
+
+
+    </div>
+
+    <!-- <p>{{ message }}</p> -->
   </div>
 </template>
 
@@ -15,6 +21,7 @@
 <script>
 import Header from './components/Header.vue'
 import MenuBar from './components/MenuBar.vue'
+import Button from './components/Button.vue'
 
 import axios from 'axios';
 
@@ -22,7 +29,8 @@ export default {
   name: 'App',
   components: {
     Header,
-    MenuBar
+    MenuBar,
+    Button
   },
   data () {
     return {
@@ -62,6 +70,13 @@ header {
 
 body {
   font-family: 'Poppins', sans-serif;
+}
+.buttonStyle {
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+
+
 }
 .container {
   position: absolute;

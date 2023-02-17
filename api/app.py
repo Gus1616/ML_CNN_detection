@@ -25,10 +25,10 @@ api = Api(app)
 # model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['accuracy'], run_eagerly=True)
 
 
-class Detection(Resource):
+# class Detection(Resource):
 
-    def get(self):
-        return {'message': "Hello From the back end"}
+#     def get(self):
+#         return {'message': "Hello From the back end"}
 
 
 
@@ -56,13 +56,13 @@ class PhotoUpload(Resource):
             predictions = loaded_model.predict(test1)
             classes = np.argmax(predictions, axis = 1)
             label_mapping = {
-                                0: 'akiec',
-                                1: 'mel',
-                                2: 'bkl',
-                                3: 'bcc',
-                                4: 'nv',
-                                5: 'vasc',
-                                6: 'df'
+                                0: 'Actinic keratoses and intraepithelial carcinoma',
+                                1: 'melanoma',
+                                2: 'benign keratosis-like lesions',
+                                3: 'basal cell carcinoma',
+                                4: 'melanocytic nevi',
+                                5: 'vascular lesions',
+                                6: 'dermatofibroma '
                             }
             
 
@@ -76,7 +76,7 @@ class PhotoUpload(Resource):
 
 api.add_resource(PhotoUpload, '/api/photo/upload')
 
-api.add_resource(Detection, '/api/endpoint')
+# api.add_resource(Detection, '/api/endpoint')
 
 if __name__ == '__main__':
     app.run()

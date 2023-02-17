@@ -1,13 +1,4 @@
 <template>
-
-    <!-- <button class="btn" @click="onPickFile">Upload Photo</button>
-    <input
-  type="file"
-  style="display: none"
-  ref="fileInput"
-  accept="image/*"
-  @change="onFilePicked"/> -->
-
   <div>
     <form>
       <input type="file" ref="fileInput" @change="upload"/>
