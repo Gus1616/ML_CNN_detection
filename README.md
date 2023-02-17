@@ -10,12 +10,36 @@
     <p>This project has given me the opportunity to further my Vue Js skills as well as learn about Convultional Neurel Networks</p>
 <p>Further information about the application will be provided shortly </p>
 
+  <p>The Web App gives the user to upload a photo of a specific mole. The app will return a prediction of what categoring the mole is in :Actinic keratoses and intraepithelial carcinoma / Bowen's disease (akiec), basal cell carcinoma (bcc), benign keratosis-like lesions (solar lentigines / seborrheic keratoses and lichen-planus like keratoses, bkl), dermatofibroma (df), melanoma (mel), melanocytic nevi (nv) and vascular lesions (angiomas, angiokeratomas, pyogenic granulomas and hemorrhage, vasc). </p>
 
-<h4>Tech stack:</h3>
+<h4>Tech stack of Web App and Tools:</h4>
   
 - Front-end: Vue Js
   
-- Backend: Flask Resful
+- Backend: Flask Restful
+  
+ - Axios library is used to consume the Flask API
+  
+ - Tools: Tensorflow, keras, Python, Jupyter notebooks, matplotlib, scikit-learn, Flask, Vue Js
+  
+  
+ <h4>Machine Learning Algorithm:</h4>
+
+- Data was obtained from Kaggle. It consisted of dermatoscopic images from different populations. Cases include a representative collection of all important diagnostic cateogories in the realm of pigmented lesions. 
+ <a href="https://www.kaggle.com/datasets/kmader/skin-cancer-mnist-ham10000?select=hmnist_28_28_L.csv" target="_blank">Link to data </a>
+  
+- Results of model: To be added...
+  
+  <h4>Walk through of application:</h4>
+  
+  <p>To be added...</p>
+
+
+  <h4>Challenges and Areas of future work:</h4>
+  
+   <p>To be added...</p>
+
+
 
  
 </div>
