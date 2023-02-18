@@ -67,7 +67,12 @@ header {
     place-items: center;
     padding-right: calc(var(--section-gap) / 2);
   }
-
+p {
+  font-size: 25px;
+}
+span {
+  font-size: 25px;
+}
 
 body {
   font-family: 'Poppins', sans-serif;
