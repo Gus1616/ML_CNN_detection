@@ -11,6 +11,8 @@
   </label>
 </form>
 <div>
+    <p v-if="loading">Loading result...</p>
+
     <p v-if="showText">The result of the sample that you uploaded is: <strong>{{ message }}</strong></p>
   </div>
   </div>
@@ -29,7 +31,9 @@ export default {
     return {
       // image: null
       message: '',
-      showText: false
+      showText: false,
+      loading: false,
+
     }
   },
   methods: {
@@ -39,11 +43,19 @@ upload() {
 
       const formData = new FormData()
       formData.append('photo', file)
+      this.loading = true;
 
-      axios.post('http://localhost:5000/api/photo/upload', formData).then(response => {
+      axios.post('http://localhost:5000/api/photo/upload', formData)
+      .then(response => {
         console.log(response.data)
         this.showText = true
         this.message = response.data.message
+      })
+      .catch(error => {
+        console.log("error with photo and response")
+      })
+      .finally(() => {
+        this.loading = false;
       })
     }
 
