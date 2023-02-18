@@ -32,7 +32,10 @@
   
   <h4>Walk through of application:</h4>
   
-  <p>To be added...</p>
+
+
+https://user-images.githubusercontent.com/90276026/219856815-ac6e793c-545d-4578-8026-1a252bd54fc0.mp4
+
 
 
   <h4>Challenges and Areas of future work:</h4>
