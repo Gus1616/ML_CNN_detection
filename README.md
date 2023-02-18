@@ -27,8 +27,11 @@
 
 - Data was obtained from Kaggle. It consisted of dermatoscopic images from different populations. Cases include a representative collection of all important diagnostic cateogories in the realm of pigmented lesions. 
  <a href="https://www.kaggle.com/datasets/kmader/skin-cancer-mnist-ham10000?select=hmnist_28_28_L.csv" target="_blank">Link to data </a>
+ 
+- A convolutional Neurel Network (CNN) was used for this task. It is a subtype of Neural Network. The built-in convolutional layer reduces the high dimensionality of images without losing its infromation. 
   
-- Results of model: To be added...
+- Results of model:
+<img src="https://user-images.githubusercontent.com/90276026/219903679-dd99eed7-18fa-4fb0-b277-5adaa41b4697.png" width="400" height="400" />
   
   <h4>Walk through of application:</h4>
   
@@ -40,8 +43,8 @@ https://user-images.githubusercontent.com/90276026/219856815-ac6e793c-545d-4578-
 
   <h4>Challenges and Areas of future work:</h4>
   
-   <p>To be added...</p>
-
+- Increase accuracy of model: Augmenting the dataset to produce more samples of the lesser lables 
+- Build a mobile application 
 
 
  
